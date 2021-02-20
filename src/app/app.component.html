@@ -1,0 +1,6 @@
+<button class="btn btn-sm btn-success" (click)="openModal()">Open Dialog </button>
+<app-modal [isShow]="showModal" (changeShow)=onChange($event)>
+
+  <p [innerHTML]="tncContent"></p>
+</app-modal>
+<div (click)="showTnC()" [ngStyle]="{cursor: 'pointer'} ">Terms & Conditions</div>

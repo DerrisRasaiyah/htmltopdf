@@ -1,0 +1,20 @@
+{
+    "roles": [
+        {
+            "name": "admin",
+            "tnc": "<p style='font-size: 8px'>Dummy content <strong>[Admin]</strong></p> <ul style='font-size: 8px'><li>first lorem133 sdksdksjdksjd  njkdhjshdjsjdbj</li><li>Second</li></ul>"
+        },
+        {
+            "name": "hcp",
+            "tnc": "<p>Dummysdkfhsdhsdhsjkldhskjdjkshdkskhdkshdkshdkshdkhskdhskdhsk content <strong>[HCP]</strong></p> <ul><li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</li><li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</li></ul>"
+        },
+        {
+            "name": "doctor",
+            "tnc": "<p>Dummy content <strong>[Doctor]</strong></p> <ul><li>first</li><li>Second</li></ul>"
+        },
+        {
+            "name": "nurse",
+            "tnc": "<p> <strong>[Nurse]</strong></p> <ul><li>first</li><li>Second</li></ul>"
+        }
+    ]
+}
