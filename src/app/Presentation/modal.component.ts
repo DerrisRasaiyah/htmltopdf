@@ -24,6 +24,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
     `,
     styles: [
         `
+        .modal { overflow: auto }
         .modal.show {
             display: block;
         }
