@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
       pdf.fromHTML(this.tncContent, 30, 30, {
         width: 540
       });
-      pdf.save("demo1.pdf")
+      pdf.save("Terms and Consitions.pdf")
       
     }
   }
