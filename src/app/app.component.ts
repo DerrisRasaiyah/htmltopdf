@@ -10,7 +10,7 @@ import * as data from './data.json';
 })
 export class AppComponent implements OnInit {
   tncContent: string;
-  //userRole may change depends on authendication [admin, hcp, doctor, nurse]
+  //userRole may change depends on authentication [admin, hcp, doctor, nurse]
   userRole: string = 'admin';
   showModal: boolean = false;
   //retrieve the roles from data.json file
@@ -31,16 +31,23 @@ export class AppComponent implements OnInit {
       const pdf = new jsPDF('p', 'pt', 'a4');
       pdf.fromHTML(this.tncContent, 30, 30, {
         width: 540
+      }, function () {
+        pdf.save("Terms and Conditions.pdf")
+      }, {
+        top: 30,
+        bottom: 30,
+        left: 30,
+        width: 540
       });
-      pdf.save("Terms and Consitions.pdf")
-      
     }
   }
 
+  //send the showModal value to ModalComponent to open the popup
   openModal() {
     this.showModal = true;
   }
-
+  
+  //get the showModal value from ModalComponent on close
   onChange(value: boolean) {
     this.showModal = value;
   }
