@@ -10,18 +10,16 @@ import * as data from './data.json';
 })
 export class AppComponent implements OnInit {
   tncContent: string;
-  userRole: string = 'admin'
+  //userRole may change depends on authendication [admin, hcp, doctor, nurse]
+  userRole: string = 'admin';
   showModal: boolean = false;
+  //retrieve the roles from data.json file
   roles: any = (data as any).default.roles;
-  doc = new jsPDF({
-    orientation: 'p',
-    unit: 'pt',
-    format: 'a4',
-  })
 
   constructor() { }
 
   ngOnInit() {
+    //filter out the exact T&C of the user based on his/her role
     let currentRoleMatch = this.roles.filter(role => role.name === this.userRole);
     if (currentRoleMatch.length > 0) {
       this.tncContent = currentRoleMatch[0].tnc;
@@ -30,8 +28,12 @@ export class AppComponent implements OnInit {
 
   showTnC() {
     if (this.tncContent) {
-      this.doc.fromHTML(this.tncContent, 30,30, { 'width': 550});
-      this.doc.save("Terms.pdf");
+      const pdf = new jsPDF('p', 'pt', 'a4');
+      pdf.fromHTML(this.tncContent, 30, 30, {
+        width: 540
+      });
+      pdf.save("demo1.pdf")
+      
     }
   }
 
